@@ -26,22 +26,22 @@
   
     <div class="container">
 
-    <div class="media">
-      <a class="pull-left" href="#">
-          {{>gravatar}}
-      </a>
-      <div class="media-body">
-        <h4 class="media-heading">Hello {{user.firstName}}!</h4>
-        <p>You have so far referred {{referrals.length}} people.</p>
-        {{#each referrals}}
-           <div>{{this}}</div>
-        {{/each}}
-    
-        <p>Have some friends to invite? Share your referral code <b>{{user.referralCode}}</b> or use your unique link</p>
-        <input type="text" value="{{shareLinks.shareLink}}" readonly />
-    
+      <div class="media">
+        <a class="pull-left" href="#">
+            {{>gravatar}}
+        </a>
+        <div class="media-body">
+          <h4 class="media-heading">Hello {{user.firstName}}!</h4>
+          <p>You have so far referred {{referrals.length}} people.</p>
+          {{#each referrals}}
+             <div>{{this}}</div>
+          {{/each}}
+      
+          <p>Have some friends to invite? Share your referral code <b>{{user.referralCode}}</b> or use your unique link</p>
+          <input type="text" value="{{shareLinks.shareLink}}" readonly />
+      
+        </div>
       </div>
-    </div>
 
       {{>debug}}
         
