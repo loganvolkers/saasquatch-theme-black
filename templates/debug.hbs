@@ -16,11 +16,11 @@
 
 <h1>Context Documentation</h1>
 
-<table>
+<table class="table">
     
     <tr><th>tenant_alias</th><td>The current tenant</td></tr>
     <tr><th>user</th><td>The currently signed-in user.
-        <table>
+        <table class="table">
             <tr><th>id</th><td>User's unique id</td></tr>
             <tr><th>accountId</th><td>User's company/group account id.</td></tr>
             <tr><th>email</th><td>User's email address.</td></tr>
@@ -36,13 +36,14 @@
 
 
 <h3>Other context (used internally)</h3>
-<table>
+<table class="table">
     <tr><th>segmentApiKey</th><td>Used internally</td></tr>
     <tr><th>mode</th><td>Used internally</td></tr>
     <tr><th>assetVersion</th><td>Used internally</td></tr>
     <tr><th>headerVersion</th><td>Used internally</td></tr>
 </table>
-    
+
+<h3>Example context</h3>
 <pre>
     tenantAlias":"test_a7fprfjx7tzxh",
     "user":
