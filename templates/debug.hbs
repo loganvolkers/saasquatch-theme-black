@@ -1,0 +1,14 @@
+{{!--
+
+
+    Debug.hbs
+
+    A handlebars template that can be included during development to make it easier to read 
+
+--}}
+
+
+<h1>Context</h1>
+{{#each this}}
+    <div>Key: {{@key}} Value = {{this}}</div>
+{{/each}}
