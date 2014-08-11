@@ -48,9 +48,18 @@
     <div class="container">
 
       <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
         
+        <div class="pull-left">{{>gravatar}}</div>
+        
+        <p class="lead">Hello {{user.firstName}}!</p>
+        <p>You have so far referred {{referrals.length}} people.</p>
+        {{#each referrals}}
+           <div>{{this}}</div>
+        {{/each}}
+
+        <p>Have some friends to invite? Share your referral code <b>{{user.referralCode}}</b> or use your unique link</p>
+        <input type="text" value="{{shareLinks.shareLink}}" readonly />
+
         {{>debug}}
       </div>
 
