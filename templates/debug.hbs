@@ -14,14 +14,63 @@
 
 
 
-<h1>Other Context</h1>
+<h1>Context Documentation</h1>
 
 <table>
     
     <tr><th>tenant_alias</th><td>The current tenant</td></tr>
-    <tr><th></th><td></td></tr>
-    <tr><th></th><td></td></tr>
-    <tr><th></th><td></td></tr>
-    <tr><th></th><td></td></tr>
+    <tr><th>user</th><td>The currently signed-in user.
+        <table>
+            <tr><th>id</th><td>User's unique id</td></tr>
+            <tr><th>accountId</th><td>User's company/group account id.</td></tr>
+            <tr><th>email</th><td>User's email address.</td></tr>
+            <tr><th>imageUrl</th><td>User's profile image URL.</td></tr>
+            <tr><th>firstName</th><td>User's first name.</td></tr>
+            <tr><th>lastName</th><td>User's last name.</td></tr>
+        </table>
+    </td></tr>
+    <tr><th>referrals</th><td>List of referrals</td></tr>
+    <tr><th>rewardBalances</th><td>List of reward balances</td></tr>
+    <tr><th>shareLinks</th><td></td></tr>
+</table>
+
+
+<h3>Other context (used internally)</h3>
+<table>
+    <tr><th>segmentApiKey</th><td>Used internally</td></tr>
+    <tr><th>mode</th><td>Used internally</td></tr>
+    <tr><th>assetVersion</th><td>Used internally</td></tr>
+    <tr><th>headerVersion</th><td>Used internally</td></tr>
+</table>
     
+<pre>
+    tenantAlias":"test_a7fprfjx7tzxh",
+    "user":
+        {"id":"219065",
+         "accountId":"219065",
+         "referralCode":"LOGANVOLKERS",
+         "email":"logan@saasquat.ch",
+         "imageUrl":"",
+         "firstName":"Logan",
+         "lastName":"Volkers"
+        },
+    "referrals":[],
+    "rewardBalances":[],
+    "isSecureUrl":false,
+    "segmentApiKey":"ysufztt1rq",
+    "shareLinks":
+        { "shareLink":"http://ssqt.ch/1oNcJTy",
+          "facebookShareLink":"http://ssqt.ch/1oNcLee",
+          "twitterShareLink":"http://ssqt.ch/1oNcLed",
+          "emailShareLink":"http://ssqt.ch/1oNcJDj",
+          "mobileShareLink":"http://ssqt.ch/1oNcJTB",
+          "mobileFacebookShareLink":"http://ssqt.ch/1oNcJTz",
+          "mobileTwitterShareLink":"http://ssqt.ch/1oNcLef",
+          "mobileEmailShareLink":"http://ssqt.ch/1oNcJDl"
+        },
+    "mode":"EMBED",
+    "assetVersion":"BKEi287d",
+    "headerVersion":"1"
+</pre>
+
 </table>
