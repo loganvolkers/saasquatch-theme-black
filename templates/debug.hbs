@@ -11,16 +11,16 @@
 <h1>Current Context</h1>
 
 
+<pre id="js-debug-context">{{this}}</pre>
+
+
 <script type="text/javascript">
    (function(){
        var context = document.getElementById("js-debug-context");
        
        context.innerText = JSON.stringify(JSON.parse(context.innerText),null,2);
    })();
-    
 </script>
-<pre id="js-debug-context">{{this}}</pre>
-
 
 
 <h1>Context Documentation</h1>
