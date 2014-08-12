@@ -49,12 +49,7 @@
 
 
       <script type="text/javascript">
-        trigger
-        $('.small-avatar').popover(
-          {
-            trigger: 'hover',
-            placement: 'top'
-        })
+
       </script>
       <div class="panel panel-default">
         <div class="panel-heading">Your referrals</div>
@@ -66,8 +61,7 @@
               	<a href="#" class="small-avatar" data-content="{{referredUser.firstName}} {{referredUser.lastName}}">
               	    {{>gravatar referredUser}}
               	</a>
-              	
-              	
+
               	<div class="hover" style="display: none;">
               		<a href="#" class="avatar">
                 	    {{>gravatar referredUser}}
@@ -95,6 +89,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="{{assets "libs/bootstrap3/js/bootstrap.min.js"}}"></script>
+  	<script src="{{assets "libs/bootstrap3/js/bootstrap.min.js"}}"></script>
+  	<script src="{{assets "javascript/widget.js"}}"></script>
   </body>
 </html>
