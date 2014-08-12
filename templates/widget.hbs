@@ -25,22 +25,64 @@
 
   <body>
   
-    <div class="container">
+    <div class="">
 
-      <div class="media">
-        <a class="pull-left" href="#">
-            {{>gravatar}}
-        </a>
-        <div class="media-body">
-          <h4 class="media-heading">Hello {{user.firstName}}!</h4>
-          <p>You have so far referred {{referrals.length}} people.</p>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">Your profile</div>
+        <div class="panel-body">
+            <div class="media">
+              <a class="pull-left" href="#">
+                  {{>gravatar user}}
+              </a>
+              <div class="media-body">
+                <h4 class="media-heading">Hello {{user.firstName}}!</h4>
+                <p>You have so far referred {{referrals.length}} people.</p>
+            
+                <p>Have some friends to invite? Share your referral code <b>{{user.referralCode}}</b> or use your unique link</p>
+                <input type="text" value="{{shareLinks.shareLink}}" readonly class="form-control" />
+            
+              </div>
+            </div>
+        </div>
+      </div>
+
+
+      <script type="text/javascript">
+        trigger
+        $('.small-avatar').popover(
+          {
+            trigger: 'hover',
+            placement: 'top'
+        })
+      </script>
+      <div class="panel panel-default">
+        <div class="panel-heading">Your referrals</div>
+        <div class="panel-body">
+          <ul>
           {{#each referrals}}
-             <div>{{this}}</div>
-          {{/each}}
-      
-          <p>Have some friends to invite? Share your referral code <b>{{user.referralCode}}</b> or use your unique link</p>
-          <input type="text" value="{{shareLinks.shareLink}}" readonly />
-      
+              <li class="examplereferred">
+              
+              	<a href="#" class="small-avatar" data-content="{{referredUser.firstName}} {{referredUser.lastName}}">
+              	    {{>gravatar referredUser}}
+              	</a>
+              	
+              	
+              	<div class="hover" style="display: none;">
+              		<a href="#" class="avatar">
+                	    {{>gravatar referredUser}}
+              		</a>
+              		<h3>{{referredUser.firstName}} {{referredUser.lastName}}</h3>
+              		<p>
+              			{{#if paid}}Paid {{/if}}User since {{dateReferred}}
+              		</p>
+              		{{#unless paid}}
+              		    <a class="remind grey" target="_blank" data-address="{{referredUser.email}}">Remind Your Friend!</a>
+              	  {{/unless}}
+              	</div>
+              </li>
+      		{{/each}}
+          </ul>
         </div>
       </div>
 
