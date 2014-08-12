@@ -2,6 +2,8 @@
 
 $(document).ready(function(){
 
+
+/**
     $('.small-avatar').popover(
       {
         trigger: 'hover',
@@ -11,5 +13,6 @@ $(document).ready(function(){
             return $(el).find(".hover").html();
         }
     });
+*/
 
 });
