@@ -14,5 +14,8 @@ $(document).ready(function(){
         }
     });
 */
-
+    $(".js-moment-since").each(function(index){
+		var time = moment(parseInt($(this).text())); 
+		$(this).text(time.fromNow());
+	});
 });

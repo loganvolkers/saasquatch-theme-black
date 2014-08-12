@@ -83,10 +83,10 @@
                   <div class="media-body">
                     <h4 class="media-heading">{{referredUser.firstName}} {{referredUser.lastName}}</h4>
                     <p>
-                			{{#if paid}}Paid {{/if}}User since {{dateReferred}}
+                			{{#if paid}}Paid {{/if}}User since <span class="js-moment-since">{{dateReferred}}</span>
                 		</p>
               		{{#unless paid}}
-              		    <a class="btn" target="_blank" data-address="{{referredUser.email}}">Remind Your Friend!</a>
+              		    <a class="btn btn-warning" target="_blank" data-address="{{referredUser.email}}">Remind Your Friend!</a>
               	  {{/unless}}
                   </div>
                 </div>
@@ -106,6 +106,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   	<script src="{{assets "libs/bootstrap3/js/bootstrap.min.js"}}"></script>
+  	<script src="{{assets "javascript/moment.min.js"}}"></script>
   	<script src="{{assets "javascript/widget.js"}}"></script>
   </body>
 </html>
