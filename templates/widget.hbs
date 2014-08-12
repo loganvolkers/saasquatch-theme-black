@@ -62,9 +62,11 @@
       <div class="panel panel-default">
         <div class="panel-heading">Your referrals</div>
         <div class="panel-body">
+        
+        <div class="row">
+
           {{#each referrals}}
-              <li class="examplereferred">
-              
+            <div class=".col-xs-4 .col-md-2">
               	<a href="#" class="small-avatar">
               	    {{>gravatar referredUser}}
               	</a>
@@ -81,11 +83,11 @@
               		    <a class="remind grey" target="_blank" data-address="{{referredUser.email}}">Remind Your Friend!</a>
               	  {{/unless}}
               	</div>
-              </li>
+            </div>
       		{{/each}}
-          </ul>
-        </div>
-      </div>
+          </div> <!-- /.row -->
+        </div> <!-- /.panel-body -->
+      </div> <!-- /.panel -->
 
       {{>debug}}
         
