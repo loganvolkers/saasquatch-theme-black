@@ -2,5 +2,8 @@
   <img src="{{imageUrl}}">
 {{else}}
   <img src="http://www.gravatar.com/avatar/?d=blank">
-  <div class="initials">{{substring firstName 1}}{{substring lastName 1}}</div>
+  {{!-- TODO: Need string helpers turned on
+    <div class="initials">{{substring firstName 1}}{{substring lastName 1}}</div>
+  --}}
+  
 {{/if}}
