@@ -18,4 +18,6 @@ $(document).ready(function(){
 		var time = moment(parseInt($(this).text())); 
 		$(this).text(time.fromNow());
 	});
+	
+	
 });

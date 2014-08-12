@@ -10,7 +10,16 @@
 
 <h1>Current Context</h1>
 
-<pre>{{this}}</pre>
+
+<script type="text/javascript">
+   (function(){
+       var context = document.getElementById("js-debug-context");
+       
+       context.innerText = JSON.stringify(JSON.parse(context.innerText),null,2);
+   })();
+    
+</script>
+<pre id="js-debug-context">{{this}}</pre>
 
 
 
@@ -29,9 +38,30 @@
             <tr><th>lastName</th><td>User's last name.</td></tr>
         </table>
     </td></tr>
-    <tr><th>referrals</th><td>List of referrals</td></tr>
+    <tr><th>referrals</th><td>List of referrals
+        
+        <table class="table">
+            <tr><th>referredUser</th><td>The User that was referred</td></tr>
+            <tr><th>paid</th><td>The account state. Either paid (True) or trial/free (False)</td></tr>
+            <tr><th>dateReferred</th><td>The date the user was first seen.</td></tr>
+            <tr><th>referrerReward</th><td>The reward for referring this user, or NULL.</td></tr>
+        </table>
+    </td></tr>
     <tr><th>rewardBalances</th><td>List of reward balances</td></tr>
-    <tr><th>shareLinks</th><td></td></tr>
+    <tr><th>shareLinks</th><td>A list of share links, tagged for various share mediums
+        
+        <table class="table">
+            <tr><th>shareLink</th><td>Default</td></tr>
+            <tr><th>facebookShareLink</th><td>Facebook from web.</td></tr>
+            <tr><th>twitterShareLink</th><td>Twitter from web.</td></tr>
+            <tr><th>emailShareLink</th><td>Email from web.</td></tr>
+            <tr><th>mobileShareLink</th><td>Default mobile.</td></tr>
+            <tr><th>mobileFacebookShareLink</th><td>Facebook from mobile.</td></tr>
+            <tr><th>mobileTwitterShareLink</th><td>Twitter from mobile.</td></tr>
+            <tr><th>mobileEmailShareLink</th><td>Email from mobile.</td></tr>
+        </table>
+        
+    </td></tr>
 </table>
 
 
