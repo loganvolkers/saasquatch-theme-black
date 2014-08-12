@@ -32,7 +32,7 @@
         <div class="panel-heading">Your profile</div>
         <div class="panel-body">
             <div class="media">
-              <a class="pull-left" href="#">
+              <a class="pull-left avatar" href="#">
                   {{>gravatar user}}
               </a>
               <div class="media-body">
@@ -43,15 +43,15 @@
                 <div class="input-group">
                   <input type="text" class="form-control" value="{{shareLinks.shareLink}}">
                   <span class="input-group-btn">
-                    <button class="btn btn-default" type="button">Copy Link</button>
+                    <button class="btn btn-success copy" type="button">Copy Link</button>
                   </span>
                 </div><!-- /input-group -->
                 
                 
                 <div class="btn-group btn-group-justified" style="margin-top: 30px;">
-                  <a class="btn btn-default" role="button"> <span class="glyphicon glyphicon-email"></span> Share on Email</a>
-                  <a class="btn btn-default" role="button"> <span class="glyphicon glyphicon-facebook"></span> Share on Facebook</a>
-                  <a class="btn btn-default" role="button"> <span class="glyphicon glyphicon-twitter"></span> Share on Twitter</a>
+                  <a class="btn btn-success emailShare" role="button"> <span class="glyphicon glyphicon-email"></span> Share on Email</a>
+                  <a class="btn btn-success fbShare" role="button"> <span class="glyphicon glyphicon-facebook"></span> Share on Facebook</a>
+                  <a class="btn btn-success twShare" role="button"> <span class="glyphicon glyphicon-twitter"></span> Share on Twitter</a>
                 </div>
               </div>
             </div>
@@ -66,8 +66,8 @@
         
         {{!-- TODO: Fill in progress bar with real data --}}
         <div class="progress">
-          <div class="progress-bar progress-bar-success progress-bar-striped active"  role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
-            <span class="sr-only">45% Complete</span>
+          <div class="progress-bar progress-bar-success progress-bar-striped active"  role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%">
+            <span class="sr-only">10% Complete</span>
           </div>
         </div>
 
@@ -86,7 +86,7 @@
                 			{{#if paid}}Paid {{/if}}User since <span class="js-moment-since">{{dateReferred}}</span>
                 		</p>
               		{{#unless paid}}
-              		    <a class="btn btn-warning" target="_blank" data-address="{{referredUser.email}}">Remind Your Friend!</a>
+              		    <a class="btn btn-success btn-xs" target="_blank" data-address="{{referredUser.email}}">Remind Your Friend!</a>
               	  {{/unless}}
                   </div>
                 </div>
