@@ -40,25 +40,32 @@
                 <p>You have so far referred {{referrals.length}} people.</p>
             
                 <p>Have some friends to invite? Share your referral code <b>{{user.referralCode}}</b> or use your unique link</p>
-                <input type="text" value="{{shareLinks.shareLink}}" readonly class="form-control" />
-            
+                <div class="input-group">
+                  <input type="text" class="form-control" value="{{shareLinks.shareLink}}">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Copy Link</button>
+                  </span>
+                </div><!-- /input-group -->
+                
+                
+                <div class="btn-group btn-group-justified">
+                  <a class="btn btn-default" role="button"> <span class="glyphicon glyphicon-email"></span> Share on Email</a>
+                  <a class="btn btn-default" role="button"> <span class="glyphicon glyphicon-facebook"></span> Share on Facebook</a>
+                  <a class="btn btn-default" role="button"> <span class="glyphicon glyphicon-twitter"></span> Share on Twitter</a>
+                </div>
               </div>
             </div>
         </div>
       </div>
 
 
-      <script type="text/javascript">
-
-      </script>
       <div class="panel panel-default">
         <div class="panel-heading">Your referrals</div>
         <div class="panel-body">
-          <ul>
           {{#each referrals}}
               <li class="examplereferred">
               
-              	<a href="#" class="small-avatar" data-content="{{referredUser.firstName}} {{referredUser.lastName}}">
+              	<a href="#" class="small-avatar">
               	    {{>gravatar referredUser}}
               	</a>
 
